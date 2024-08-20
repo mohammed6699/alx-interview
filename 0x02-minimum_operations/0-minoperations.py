@@ -2,12 +2,10 @@
 """
     Minimum Operations
 """
-
 def minOperations(n:int) -> int:
     """
         the fewest number of operations needed to result in exactly 
     """
-
     body = 'H'
     next ='H'
     ops = 0
@@ -20,7 +18,6 @@ def minOperations(n:int) -> int:
         else:
             ops += 1
             body += next
-
     if (len(body) == n):
             return ops
     else:
