@@ -1,9 +1,26 @@
 #!/usr/bin/python3
+"""
+    Create a helper function to precompute the prime numbers up to the maximum value of n
+    or each value of n, simulate the game to determine the winner by tracking turns and removing primes and their multiples
+    Tally the wins for Maria and Ben across all rounds.
+    Compare the win counts and return the name of the player with the most wins, or None if they have equal wins.
+"""
 def isWinner(x, nums):
+    """
+        x: a number 
+        nums: arrays of n
+        if nums or x is valiable retrun num
+        else return false
+    """
     if not nums or x < 1:
         return None
     
     def Sieve(max_n):
+        """
+            precompute prime numbers up to the maximum n
+            max_n: max number of sieve
+           return name of the winner
+        """
         primes = [True] * (max_n + 1)
         primes[0] = primes[1] = False
         for i in range (2, int(max_n**0.5) + 1):
